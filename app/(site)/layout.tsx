@@ -21,24 +21,27 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CyberSafe</title>
         <base href="/" />
-        <a
+        <link
           rel="shortcut icon"
           href="assets/Images/fave_icon.png"
           type="image/x-icon"
         />
         {/* <!-- Framework Css --> */}
-        <a rel="stylesheet" href="assets/css/bootstrap-lib/bootstrap.min.css" />
+        <link
+          rel="stylesheet"
+          href="assets/css/bootstrap-lib/bootstrap.min.css"
+        />
         {/* <!-- Font Awesome / Icon Fonts --> */}
-        <a
+        <link
           rel="stylesheet"
           href="assets/font-awesome-lib/icon/font-awesome.min.css"
         />
         {/* <!-- Style Theme --> */}
-        <a rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
         {/* <!-- Responsive Theme --> */}
-        <a rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
         {/* <!-- slider --> */}
-        <a rel="stylesheet" href="assets/css/slick.min.css"></a>
+        <link rel="stylesheet" href="assets/css/slick.min.css"></link>
       </head>
       <body className={inter.className}>
         {children}
