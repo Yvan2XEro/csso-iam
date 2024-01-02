@@ -1,0 +1,471 @@
+{
+  "id": "8247da36-c45b-4c78-9513-0d86014ec735",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "faqs": {
+      "name": "faqs",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "question": {
+          "name": "question",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "response": {
+          "name": "response",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "globals": {
+      "name": "globals",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "icon": {
+          "name": "icon",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "facebook": {
+          "name": "facebook",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "instagram": {
+          "name": "instagram",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "x": {
+          "name": "x",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "linkedin": {
+          "name": "linkedin",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "adress": {
+          "name": "adress",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phone": {
+          "name": "phone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lng": {
+          "name": "lng",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lat": {
+          "name": "lat",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "getInTouchText": {
+          "name": "getInTouchText",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ourVisionTitle": {
+          "name": "ourVisionTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "visionDescription": {
+          "name": "visionDescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "missionDescription": {
+          "name": "missionDescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "heroTitle": {
+          "name": "heroTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "heroDescription": {
+          "name": "heroDescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "heroImage": {
+          "name": "heroImage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "whyUsTitle": {
+          "name": "whyUsTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "whyUsImage": {
+          "name": "whyUsImage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "whyUsDescription": {
+          "name": "whyUsDescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "aboutSectionTitle": {
+          "name": "aboutSectionTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "aboutSectionDescription": {
+          "name": "aboutSectionDescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "aboutSectionImage": {
+          "name": "aboutSectionImage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "aboutTeamDescription": {
+          "name": "aboutTeamDescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serviceTitle": {
+          "name": "serviceTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "servicesDescrption": {
+          "name": "servicesDescrption",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "howWeWorkTitle": {
+          "name": "howWeWorkTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "howWeWorkImage": {
+          "name": "howWeWorkImage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "howWeWorkDescription": {
+          "name": "howWeWorkDescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "docsLink": {
+          "name": "docsLink",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "''"
+        },
+        "ctaTitle": {
+          "name": "ctaTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "''"
+        },
+        "ctaDescription": {
+          "name": "ctaDescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "''"
+        },
+        "faqSectionTitle": {
+          "name": "faqSectionTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "''"
+        },
+        "faqSectionDescription": {
+          "name": "faqSectionDescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "''"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "members": {
+      "name": "members",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "image": {
+          "name": "image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "reasons": {
+      "name": "reasons",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "image": {
+          "name": "image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "services": {
+      "name": "services",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "image": {
+          "name": "image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "name": "password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "unique_idx": {
+          "name": "unique_idx",
+          "columns": [
+            "email"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "banners": {
+      "name": "banners",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "about": {
+          "name": "about",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "service": {
+          "name": "service",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "contact": {
+          "name": "contact",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "blog": {
+          "name": "blog",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "team": {
+          "name": "team",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cta": {
+          "name": "cta",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "''"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
