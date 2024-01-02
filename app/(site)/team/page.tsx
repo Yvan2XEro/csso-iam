@@ -1,10 +1,21 @@
-import { fetchBanners, fetchGlobals } from "@/app/lib/api";
+import { fetchBanners, fetchGlobals, fetchMembers } from "@/app/lib/api";
 import { Footer } from "@/components/organims/Footer";
 import { MobileNavbar, Navbar } from "@/components/organims/Navbar";
 
 export default async function Home() {
   const global = await fetchGlobals();
   const banners = await fetchBanners();
+  const members = await (async () => {
+    const data = await fetchMembers();
+    const matrix = [];
+    let rowIndex = 0;
+    for (let i = 0; i < data.length; i += 2) {
+      const row = data.slice(i, i + 2);
+      matrix[rowIndex] = row;
+      rowIndex++;
+    }
+    return matrix;
+  })();
   return (
     <div className="site-wrapper">
       <div
@@ -35,114 +46,31 @@ export default async function Home() {
             <p>{global.aboutTeamDescription}</p>
           </div>
           <div className="slider">
-            <div className="d-flex justify-content-between align-items-center gap-lg-5 gap-md-4 gap-sm-5 gap-4 mt-5 flex-md-row flex-sm-column flex-column">
-              <div className="testimonial_card d-flex gap-lg-5 gap-md-3 gap-sm-5 gap-2 align-items-center flex-md-row flex-sm-row flex-column text-md-start text-sm-start text-center">
-                <figure>
-                  <img
-                    src="assets/Images/slider/testimonial1.jpg"
-                    alt="testimonial"
-                  />
-                </figure>
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <hr />
-                  <h4>Jacob scott</h4>
-                </div>
+            {members.map((arr, i) => (
+              <div
+                key={i}
+                className="d-flex justify-content-between align-items-center gap-lg-5 gap-md-4 gap-sm-5 gap-4 mt-5 flex-md-row flex-sm-column flex-column"
+              >
+                {arr.slice(0, Math.ceil(members.length / 2)).map((m) => (
+                  <div
+                    key={m.id}
+                    className="testimonial_card d-flex gap-lg-5 gap-md-3 gap-sm-5 gap-2 align-items-center flex-md-row flex-sm-row flex-column text-md-start text-sm-start text-center"
+                  >
+                    <figure>
+                      <img
+                        src="assets/Images/slider/testimonial1.jpg"
+                        alt="testimonial"
+                      />
+                    </figure>
+                    <div>
+                      <p>{m.description}</p>
+                      <hr />
+                      <h4>{m.title}</h4>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="testimonial_card d-flex gap-lg-5 gap-md-3 gap-sm-5 gap-2 align-items-center flex-md-row flex-sm-row flex-column text-md-start text-sm-start text-center">
-                <figure>
-                  <img
-                    src="assets/Images/slider/testimonial2.jpg"
-                    alt="testimonial"
-                  />
-                </figure>
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <hr />
-                  <h4>Phillip boyd</h4>
-                </div>
-              </div>
-            </div>
-            <div className="d-flex justify-content-between align-items-center gap-lg-5 gap-md-4 gap-sm-5 gap-4 mt-5 flex-md-row flex-sm-column flex-column">
-              <div className="testimonial_card d-flex gap-lg-5 gap-md-3 gap-sm-5 gap-2 align-items-center flex-md-row flex-sm-row flex-column text-md-start text-sm-start text-center">
-                <figure>
-                  <img
-                    src="assets/Images/slider/testimonial3.jpg"
-                    alt="testimonial"
-                  />
-                </figure>
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <hr />
-                  <h4>Jacob scott</h4>
-                </div>
-              </div>
-              <div className="testimonial_card d-flex gap-lg-5 gap-md-3 gap-sm-5 gap-2 align-items-center flex-md-row flex-sm-row flex-column text-md-start text-sm-start text-center">
-                <figure>
-                  <img
-                    src="assets/Images/slider/testimonial4.jpg"
-                    alt="testimonial"
-                  />
-                </figure>
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <hr />
-                  <h4>Phillip boyd</h4>
-                </div>
-              </div>
-            </div>
-            <div className="d-flex justify-content-between align-items-center gap-lg-5 gap-md-4 gap-sm-5 gap-4 mt-5 flex-md-row flex-sm-column flex-column">
-              <div className="testimonial_card d-flex gap-lg-5 gap-md-3 gap-sm-5 gap-2 align-items-center flex-md-row flex-sm-row flex-column text-md-start text-sm-start text-center">
-                <figure>
-                  <img
-                    src="assets/Images/slider/testimonial5.jpg"
-                    alt="testimonial"
-                  />
-                </figure>
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <hr />
-                  <h4>Jacob scott</h4>
-                </div>
-              </div>
-              <div className="testimonial_card d-flex gap-lg-5 gap-md-3 gap-sm-5 gap-2 align-items-center flex-md-row flex-sm-row flex-column text-md-start text-sm-start text-center">
-                <figure>
-                  <img
-                    src="assets/Images/slider/testimonial6.jpg"
-                    alt="testimonial"
-                  />
-                </figure>
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <hr />
-                  <h4>Phillip boyd</h4>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
