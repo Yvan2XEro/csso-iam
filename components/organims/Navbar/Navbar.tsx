@@ -9,9 +9,9 @@ export default async function Navbar() {
     <nav className="navbar navbar-expand-lg">
       <div className="container">
         {/* <!-- site logo --> */}
-        <Link href="/" className="navbar-brand p-0">
-          <img src="assets/Images/logo.png" alt="logo" />
-        </Link>
+        <a href="/" className="navbar-brand p-0">
+          <img src={global.icon + ""} alt="logo" />
+        </a>
         <button className="navbar-toggler" type="button">
           <span className="fa-solid fa-bars"></span>
         </button>
@@ -22,24 +22,24 @@ export default async function Navbar() {
           {/* <!-- menus --> */}
           <ul className="navbar-nav d-flex gap-5 align-items-center">
             <li className="nav-item">
-              <Link href="/" className="nav-link p-0">
+              <a href="/" className="nav-link p-0">
                 Home
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link href="/about-us" className="nav-link p-0">
+              <a href="/about-us" className="nav-link p-0">
                 About us
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link href="/services" className="nav-link p-0">
+              <a href="/services" className="nav-link p-0">
                 Services
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link href="/contact-us" className="nav-link p-0">
+              <a href="/contact-us" className="nav-link p-0">
                 Contact
-              </Link>
+              </a>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -55,29 +55,24 @@ export default async function Navbar() {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <li>
-                  <Link href="/faq" className="dropdown-item">
+                  <a href="/faq" className="dropdown-item">
                     FAQ
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/team" className="dropdown-item">
+                  <a href="/team" className="dropdown-item">
                     Team
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/blog" className="dropdown-item active">
+                  <a href="/blog" className="dropdown-item active">
                     Blog
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/coming-soon" className="dropdown-item">
+                  <a href="/coming-soon" className="dropdown-item">
                     Coming soon
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/not-found" className="dropdown-item">
-                    404
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </li>

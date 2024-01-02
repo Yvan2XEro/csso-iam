@@ -32,11 +32,11 @@ export default function Footer({ globals }: { globals: Globals }) {
           </div>
           <div className="row text-md-start text-sm-center text-center">
             <div className="col-lg-5 col-md-5">
-              <Link href="/" className="p-0">
+              <a href="/" className="p-0">
                 <figure>
                   <img src="assets/Images/logo.png" alt="logo" />
                 </figure>
-              </Link>
+              </a>
               <p className="pb-3 pe-md-5 pe-sm-0 pe-0">
                 {globals.description as any}
               </p>
@@ -60,24 +60,24 @@ export default function Footer({ globals }: { globals: Globals }) {
               <h4>Useful links</h4>
               <div className="d-flex gap-md-5 gap-sm-5 gap-5 mt-4 justify-content-md-start justify-content-sm-center justify-content-center">
                 <div className="d-flex flex-column gap-4">
-                  <Link href="/" className="p-0">
+                  <a href="/" className="p-0">
                     Home
-                  </Link>
-                  <Link href="/about-us" className="p-0">
+                  </a>
+                  <a href="/about-us" className="p-0">
                     About
-                  </Link>
-                  <Link href="/services" className="p-0">
+                  </a>
+                  <a href="/services" className="p-0">
                     Services
-                  </Link>
+                  </a>
                 </div>
                 <div className="d-flex flex-column gap-4">
-                  <Link href="/contact-us" className="p-0">
+                  <a href="/contact-us" className="p-0">
                     Contact
-                  </Link>
+                  </a>
 
-                  <Link href="/blog" className="p-0">
+                  <a href="/blog" className="p-0">
                     Blog
-                  </Link>
+                  </a>
                 </div>
               </div>
               <hr />

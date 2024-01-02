@@ -50,9 +50,9 @@ export default async function page() {
               <p>{global.aboutSectionDescription}</p>
               <div className="mt-md-5 mt-sm-4 mt-4 d-flex justify-content-md-start justify-content-sm-center justify-content-center gap-3">
                 {/* <!-- about button --> */}
-                <Link href="/about-us" className="btn_hover">
+                <a href="/about-us" className="btn_hover">
                   Learn more
-                </Link>
+                </a>
                 <a
                   target="_blank"
                   href={global.docsLink + ""}

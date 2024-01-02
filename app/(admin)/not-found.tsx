@@ -13,9 +13,9 @@ export default function page() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
         </p>
-        <Link href="/" className="btn_hover">
+        <a href="/" className="btn_hover">
           Go back to home
-        </Link>
+        </a>
       </div>
     </section>
   );

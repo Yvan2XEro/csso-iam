@@ -20,27 +20,25 @@ export default function RootLayout({
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CyberSafe</title>
-        <link
+        <base href="/" />
+        <a
           rel="shortcut icon"
           href="assets/Images/fave_icon.png"
           type="image/x-icon"
         />
         {/* <!-- Framework Css --> */}
-        <link
-          rel="stylesheet"
-          href="assets/css/bootstrap-lib/bootstrap.min.css"
-        />
+        <a rel="stylesheet" href="assets/css/bootstrap-lib/bootstrap.min.css" />
         {/* <!-- Font Awesome / Icon Fonts --> */}
-        <link
+        <a
           rel="stylesheet"
           href="assets/font-awesome-lib/icon/font-awesome.min.css"
         />
         {/* <!-- Style Theme --> */}
-        <link rel="stylesheet" href="assets/css/style.css" />
+        <a rel="stylesheet" href="assets/css/style.css" />
         {/* <!-- Responsive Theme --> */}
-        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <a rel="stylesheet" href="assets/css/responsive.css" />
         {/* <!-- slider --> */}
-        <link rel="stylesheet" href="assets/css/slick.min.css"></link>
+        <a rel="stylesheet" href="assets/css/slick.min.css"></a>
       </head>
       <body className={inter.className}>
         {children}

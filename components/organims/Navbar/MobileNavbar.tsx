@@ -1,12 +1,16 @@
+import { fetchGlobals } from "@/app/lib/api";
+import Link from "next/link";
 import React from "react";
 
-export default function NavbarSide() {
+export default async function NavbarSide() {
+  const global = await fetchGlobals();
+
   return (
     <aside id="mySidepanel" className="sidepanel">
       <div className="sidebar">
         <a className="p-0" href="index.html">
           {" "}
-          <img src="assets/Images/logo.png" alt="logo" />{" "}
+          <img src={global.icon + ""} alt="logo" />
         </a>
         <button className="closebtn">
           <i className="fa-solid fa-xmark"></i>
@@ -16,22 +20,22 @@ export default function NavbarSide() {
         {/* <!-- side menus --> */}
         <ul>
           <li className="nav-item">
-            <a className="nav-link" href="index.html">
+            <a className="nav-link" href="/">
               Home
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="About.html">
+            <a className="nav-link" href="/about-us">
               About us
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="Service.html">
+            <a className="nav-link" href="services">
               Services
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="Contact.html">
+            <a className="nav-link" href="/contact-us">
               Contact
             </a>
           </li>
@@ -54,33 +58,23 @@ export default function NavbarSide() {
             <div className="collapse" id="pages">
               <ul>
                 <li className="nav-item">
-                  <a className="nav-link" href="faq.html">
+                  <a href="/faq" className="nav-link">
                     FAQ
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Testimonial.html">
-                    Testimonial
+                  <a href="/team" className="nav-link">
+                    Team
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Pricing.html">
-                    Pricing plan
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" href="Blog.html">
+                  <a href="/blog" className="nav-link active">
                     Blog
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Coming_soon.html">
+                  <a href="/coming-soon" className="nav-link">
                     Coming soon
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="404.html">
-                    404
                   </a>
                 </li>
               </ul>

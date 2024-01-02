@@ -4,32 +4,37 @@ const menuItems = [
   {
     name: "Globals Infos",
     href: "/admin/globals",
-    icon: <LayoutDashboard />,
+    icon: <></>,
   },
   {
     name: "Banners images",
     href: "/admin/banners",
-    icon: <LayoutDashboard />,
+    icon: <></>,
   },
   {
     name: "FAQs",
     href: "/admin/faqs",
-    icon: <LayoutDashboard />,
+    icon: <></>,
   },
   {
     name: "Members",
     href: "/admin/members",
-    icon: <LayoutDashboard />,
+    icon: <></>,
   },
   {
     name: "Reasons",
     href: "/admin/reasons",
-    icon: <LayoutDashboard />,
+    icon: <></>,
   },
   {
     name: "Services",
     href: "/admin/services",
-    icon: <LayoutDashboard />,
+    icon: <></>,
+  },
+  {
+    name: "Upload Image",
+    href: "/admin/image",
+    icon: <></>,
   },
 ];
 

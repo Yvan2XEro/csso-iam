@@ -28,9 +28,9 @@ export default function page() {
             <h6>Seconds</h6>
           </div>
         </div>
-        <Link href="/" className="btn_hover">
+        <a href="/" className="btn_hover">
           Go back to home
-        </Link>
+        </a>
       </div>
     </section>
   );

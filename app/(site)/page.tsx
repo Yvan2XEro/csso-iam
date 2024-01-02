@@ -58,9 +58,9 @@ export default async function Home() {
               <div className="col-lg-6 col-md-6 d-flex flex-column align-items-md-start align-items-sm-center align-items-center justify-content-center gap-md-4 gap-sm-3 gap-3">
                 <h1>{global.heroTitle}</h1>
                 <p>{global.heroDescription}</p>
-                <Link href="/about-us" className="btn_hover mt-3">
+                <a href="/about-us" className="btn_hover mt-3">
                   Learn more
-                </Link>
+                </a>
               </div>
               <div className="col-lg-6 col-md-6 d-flex justify-content-end">
                 <figure>
@@ -102,9 +102,9 @@ export default async function Home() {
               <p>{global.aboutSectionDescription}</p>
               <div className="mt-md-5 mt-sm-4 mt-4 d-flex justify-content-md-start justify-content-sm-center justify-content-center gap-3">
                 {/* <!-- about button --> */}
-                <Link href="/about-us" className="btn_hover">
+                <a href="/about-us" className="btn_hover">
                   Learn more
-                </Link>
+                </a>
                 <a
                   target="_blank"
                   href={global.docsLink + ""}
@@ -179,9 +179,9 @@ export default async function Home() {
                 {global.whyUsDescription}
               </p>
               {/* <!-- button --> */}
-              <Link href="/about-us" className="btn_hover mt-4">
+              <a href="/about-us" className="btn_hover mt-4">
                 Learn more
-              </Link>
+              </a>
 
               <figure>
                 <img
@@ -333,12 +333,12 @@ export default async function Home() {
           </figure>
           <br />
           <br />
-          <Link
+          <a
             href="/services"
             className="view_service btn_hover mt-lg-3 mt-md-3 mt-sm-3 mt-0"
           >
             View all services
-          </Link>
+          </a>
         </div>
       </section>
       {/* <!-- ====== End of 1.7. Our Services section ====== --> */}
