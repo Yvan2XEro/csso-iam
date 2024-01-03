@@ -11,7 +11,12 @@ export default async function Navbar() {
       <div className="container">
         {/* <!-- site logo --> */}
         <a href="/" className="navbar-brand p-0">
-          <Image width={197} height={54} src={global.icon + ""} alt="logo" />
+          <img
+            width={197}
+            height={54}
+            src={"/assets/Images/logo.png"}
+            alt="logo"
+          />
         </a>
         <button className="navbar-toggler" type="button">
           <span className="fa-solid fa-bars"></span>

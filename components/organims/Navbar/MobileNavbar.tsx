@@ -10,7 +10,7 @@ export default async function NavbarSide() {
       <div className="sidebar">
         <a className="p-0" href="index.html">
           {" "}
-          <img src={global.icon + ""} alt="logo" />
+          <img src={"/assets/Images/logo.png"} alt="logo" />
         </a>
         <button className="closebtn">
           <i className="fa-solid fa-xmark"></i>
