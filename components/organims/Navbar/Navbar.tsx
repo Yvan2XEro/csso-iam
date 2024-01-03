@@ -1,4 +1,5 @@
 import { fetchGlobals } from "@/app/lib/api";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -10,7 +11,7 @@ export default async function Navbar() {
       <div className="container">
         {/* <!-- site logo --> */}
         <a href="/" className="navbar-brand p-0">
-          <img src={global.icon + ""} alt="logo" />
+          <Image width={197} height={54} src={global.icon + ""} alt="logo" />
         </a>
         <button className="navbar-toggler" type="button">
           <span className="fa-solid fa-bars"></span>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FormEvent } from "react";
+import React, { FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
@@ -10,6 +10,7 @@ const pubKey = process.env.NEXT_PUBLIC_EMAIL_EMAIL_PUBLIC_KEY;
 
 export default function ContactForm() {
   const ref = React.useRef<HTMLFormElement>(null);
+  const [submitting, setSub] = useState(false);
   return (
     <form
       id="contact-form"
@@ -17,21 +18,26 @@ export default function ContactForm() {
       onSubmit={(e) => {
         e.preventDefault();
         if (!service_id || !template_id || !pubKey) return;
+
+        setSub(true);
         emailjs
           .sendForm(service_id, template_id, e.target as any, pubKey)
           .then((result) => {
             ref.current?.reset();
+            setSub(false);
             toast.success("Message sent");
           })
           .catch((error) => {
-            toast.error(error.text);
+            setSub(false);
+
+            toast.error("Failed retry later");
           });
       }}
     >
       <div id="contact-message"> </div>
       <div className="d-flex gap-lg-4 gap-md-3 gap-sm-4 gap-3">
         <input type="text" name="name" required placeholder="Your name" />
-        <input type="email" placeholder="Email address" required />
+        <input type="email" name="email" placeholder="Email address" required />
       </div>
       <div className="d-flex gap-lg-4 gap-md-3 gap-sm-4 gap-3">
         <input type="text" placeholder="Phone number" name="phone" required />
@@ -46,7 +52,9 @@ export default function ContactForm() {
           placeholder="Write here message"
         ></textarea>
       </div>
-      <button type="submit">Submit</button>
+      <button disabled={submitting} type="submit">
+        Submit
+      </button>
     </form>
   );
 }
