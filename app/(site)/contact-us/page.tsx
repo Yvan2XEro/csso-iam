@@ -2,6 +2,7 @@ import { fetchBanners, fetchFaqs, fetchGlobals } from "@/app/lib/api";
 import { Footer } from "@/components/organims/Footer";
 import { MobileNavbar, Navbar } from "@/components/organims/Navbar";
 import React from "react";
+import ContactForm from "./ContactForm";
 
 export default async function page() {
   const global = await fetchGlobals();
@@ -53,25 +54,7 @@ export default async function page() {
               <h2>Get in touch with us</h2>
               <p>{global.getInTouchText}</p>
               {/* <!-- contact form --> */}
-              <form id="contact-form">
-                <div id="contact-message"> </div>
-                <div className="d-flex gap-lg-4 gap-md-3 gap-sm-4 gap-3">
-                  <input type="text" placeholder="Your name" />
-                  <input type="email" placeholder="Email address" required />
-                </div>
-                <div className="d-flex gap-lg-4 gap-md-3 gap-sm-4 gap-3">
-                  <input type="text" placeholder="Phone number" />
-                  <input type="text" placeholder="Subject" />
-                </div>
-                <div>
-                  <textarea
-                    cols={30}
-                    rows={8}
-                    placeholder="Write here message"
-                  ></textarea>
-                </div>
-                <button type="submit">Submit</button>
-              </form>
+              <ContactForm />
               <figure>
                 <img
                   src="assets/Images/bg/about_cercle1.png"

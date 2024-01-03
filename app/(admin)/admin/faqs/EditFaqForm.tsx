@@ -15,6 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { eq } from "drizzle-orm";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import * as z from "zod";
 
 const formSchema = z.object({
@@ -43,9 +44,10 @@ export default function EditFaqForm({ data, id, oncancel }: TProps) {
       } else {
         await addFaqs(payload);
       }
+      toast.success("Successfully");
       location.reload();
     } catch (error) {
-      alert(error);
+      toast.error("Failed, try again");
     }
   }
   return (

@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ImageInput } from "../../atoms/ImageInput";
 import { addBanners, updateBanners } from "@/app/lib/actions";
+import { toast } from "react-toastify";
 
 const formSchema = z.object({
   about: z.string().default(""),
@@ -45,9 +46,10 @@ export default function BannersForm({
       } else {
         await addBanners(payload);
       }
+      toast.success("Successfully");
       location.reload();
     } catch (error) {
-      console.log(error);
+      toast.error("Failed, try again");
     }
   }
   return (

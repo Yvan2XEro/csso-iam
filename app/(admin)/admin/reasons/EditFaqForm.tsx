@@ -21,6 +21,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { ImageInput } from "../../components/atoms/ImageInput";
+import { toast } from "react-toastify";
 
 const formSchema = z.object({
   title: z.string(),
@@ -49,9 +50,10 @@ export default function EditFaqForm({ data, id, oncancel }: TProps) {
       } else {
         await addreasons(payload);
       }
+      toast.success("Successfully");
       location.reload();
     } catch (error) {
-      alert(error);
+      toast.error("Failed, try again");
     }
   }
   return (
