@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -50,7 +51,7 @@ export default function RootLayout({
         <button id="backToTopBtn" className="btn_hover2">
           <i className="fa-solid fa-arrow-turn-up"></i>
         </button>
-
+        <ToastContainer />
         {/* <!-- j Query --> */}
         <script src="assets/js/jquery.js" async></script>
         {/* <!-- counter --> */}

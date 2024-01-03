@@ -19,6 +19,7 @@ import { ImageInput } from "../../atoms/ImageInput";
 import { GlobalTable, db } from "@/lib/schema";
 import { eq } from "drizzle-orm";
 import { addGlobal, updateGlobal } from "@/app/lib/actions";
+import { toast } from "react-toastify";
 
 const formSchema = z.object({
   icon: z.string().default(""),
@@ -92,9 +93,10 @@ export default function GlobalsForm({
       } else {
         await addGlobal(payload);
       }
+      toast.success("Successfully");
       location.reload();
     } catch (error) {
-      console.log(error);
+      toast.error("Failed, try again");
     }
   }
   console.log(form.formState.errors);
